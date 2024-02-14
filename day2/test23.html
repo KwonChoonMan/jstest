@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <!-- 점수가 70점이상이면 합격, 아니면 불합격이라고 alert()출력-->
+  점수:<input type="number" id="jumsu">
+  <button onclick="판정();">출력</button>
+
+  <!-- 올해의 년도는 2024 나이를 출력하시오-->
+  생년 : <input type="number" id="year">
+  <button onclick="나이();">나이출력</button>
+  
+   <!--나이가 20세이상이면 "성인", 그렇지 않으면 "미성년자" alert()-->
+   태어난 년도<input type="number" id="year2">
+   <button onclick="나이2();">출력2</button>
+   <script>
+     function 판정() {
+        let jumsu = $('#jumsu').val();
+        if(jumsu>=70) {
+            alert("합격");
+        }else{
+            alert("불합격");
+        }
+     }
+     function 나이() {
+        let year = $('#year').val();
+       let this_year=2024;
+        alert((this_year-year)+1);
+     }
+     function 나이2(){
+        let year = $('#year2').val();
+        if(year>=20){
+            alert("성인");
+        }else{
+            alert("미성년자");
+        }
+     }
+  </script>
+</body>
+</html>
