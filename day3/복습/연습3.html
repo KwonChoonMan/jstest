@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        #target{height: 100px; width: 100px; background-color: red;}
+    </style>
+</head>
+<body>
+ <div id="target">
+</div>
+ <button id="one">원으로</button>
+ <button id="rect" disabled>사각형으로</button>
+ <script>
+    let $target = $("#target");
+    let $one = $('#one');
+    let $rect = $('#rect');
+
+    $one.on('click', function(){
+      $target.css('border-radius' , '100px')
+      .css('background-color','blue');
+      $one.attr('disabled', true);
+      $rect.attr('disabled', false);
+    });
+    $rect.on('click', function() {
+       $target.css('border-radius' , '0px')
+       .css('background-color','red');
+       $one.attr('disabled',false);
+       $rect.attr('disabled',true);
+    })
+ </script>
+</body>
+</html>
