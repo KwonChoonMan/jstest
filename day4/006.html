@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+   
+    <ul>
+
+    </ul>
+</head>
+<body>
+    <div id="target">
+
+    </div>
+    <script>
+        // 좋아하는 것을 배열에 담아 #target에 출력
+        let girs =['아이유','수지','에이핑크','오마이걸']
+        let $target = $('#target');
+        for(let g of girs) {
+            $('#target' ).append(`<p class='girs'>${g}</p>`)
+        }
+
+        $('.girs').on('click', function(){
+           alert($(this).text());
+        })
+        
+        
+    </script>
+</body>
+</html>
